@@ -15,6 +15,8 @@ export class CursosComponent implements OnInit {
     this.nomePortal = "http://loiane.training";
 
     this.cursos = this.cursosService.getCursos();
+
+    var servico = new CursosService();
   }
 
   ngOnInit() {}
