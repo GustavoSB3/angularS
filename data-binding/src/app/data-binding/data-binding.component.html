@@ -3,5 +3,15 @@
     <h3>Interpolação / Interpolation</h3>
     <p>String redenrizada com interpolção: {{ url }}</p>
     <p>Resultado de 1+1 é: {{ 1 + 1 }}</p>
+    <p>Resultado de 1+1 não é: {{ 1 + 1 + getValor() }}</p>
+    <p>
+      Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}
+    </p>
+  </article>
+
+  <article>
+    <h3>Propety Binding</h3>
+    <img src="{{ urlImagem }}" alt="Angular" />
+    <img [src]="urlImagem" alt="Angular" />
   </article>
 </section>
