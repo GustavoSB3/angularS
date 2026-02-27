@@ -30,4 +30,13 @@ export class DataBindingComponent implements OnInit {
   getCurtirCurso() {
     return true;
   }
+
+  botaoClicado() {
+    alert("Botão clicado!");
+  }
+
+  onKeyUp(event: any) {
+    this.valorSalvo = event.target.value;
+    console.log(event);
+  }
 }

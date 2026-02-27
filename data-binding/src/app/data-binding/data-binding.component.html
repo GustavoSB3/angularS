@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!--section class="property-binding">
   <article>
     <h3>Interpolação / Interpolation</h3>
     <p>String redenrizada com interpolção: {{ url }}</p>
@@ -56,5 +56,28 @@
     >
       Erro
     </div>
+
+    <div
+      class="alert alert-danger"
+      role="alert"
+      [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'"
+    >
+      Esse texto somente aparece em caso de erro
+    </div>
   </div>
+</section-->
+
+<section class="event-binding">
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Me clique!
+      </button>
+
+      <br />><br />
+
+      <input type="text" (keyup)="onKeyUp($event)" />
+    </div>
+  </article>
 </section>
