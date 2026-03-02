@@ -1,3 +1,4 @@
+import { Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -36,7 +37,14 @@ export class DataBindingComponent implements OnInit {
   }
 
   onKeyUp(event: any) {
-    this.valorSalvo = event.target.value;
-    console.log(event);
+    this.valorAtual = (<HTMLInputElement>event.target).value;
+  }
+
+  salvarValor(valor: any) {
+    this.valorSalvo = valor.value;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 }

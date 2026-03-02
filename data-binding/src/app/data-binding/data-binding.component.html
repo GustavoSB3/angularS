@@ -77,7 +77,25 @@
 
       <br />><br />
 
-      <input type="text" (keyup)="onKeyUp($event)" />
+      <input
+        type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor($event.target)"
+        (blur)="salvarValor($event.target)"
+        #campoInput
+      />
+
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br /><br />
+
+      <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+        >Passe o mouse sobre mim</span
+      >
     </div>
   </article>
 </section>
