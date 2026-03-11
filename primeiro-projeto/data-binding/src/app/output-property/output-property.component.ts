@@ -17,15 +17,15 @@ import {
 export class OutputPropertyComponent implements OnInit {
   @Input() valor: number = 0;
 
-  mudouValor = new EventEmitter();
-
-  incrementa() {
-    this.valor++;
-    this.mudouValor.emit({ novoValor: this.valor });
-  }
+  @Output() mudouValor = new EventEmitter();
 
   decrementa() {
     this.valor--;
+    this.mudouValor.emit({ novoValor: this.valor });
+  }
+
+  incrementa() {
+    this.valor++;
     this.mudouValor.emit({ novoValor: this.valor });
   }
 
