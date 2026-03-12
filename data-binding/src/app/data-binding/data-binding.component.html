@@ -67,7 +67,7 @@
   </div>
 </section-->
 
-<section class="event-binding">
+<!--section class="event-binding">
   <article>
     <h3>Event Binding</h3>
     <div>
@@ -98,4 +98,10 @@
       >
     </div>
   </article>
-</section>
+</section!-->
+
+<div>
+  <input type="text" [value]="nome" (input)="nome = evento.value" #evento />
+  <input type="text" [value]="nome" (input)="nome = evento.value" #evento />
+  <p>Você digitou: {{ nome }}</p>
+</div>
