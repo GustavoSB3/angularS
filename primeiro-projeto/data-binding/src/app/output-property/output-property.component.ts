@@ -19,12 +19,15 @@ export class OutputPropertyComponent implements OnInit {
 
   @Output() mudouValor = new EventEmitter();
 
+  @ViewChild("campoInput") campoValorInput: ElementRef;
+
   decrementa() {
     this.valor--;
     this.mudouValor.emit({ novoValor: this.valor });
   }
 
   incrementa() {
+    console.log(this.campoValorInput);
     this.valor++;
     this.mudouValor.emit({ novoValor: this.valor });
   }
